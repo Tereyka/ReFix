@@ -1,0 +1,172 @@
+/* * {
+    outline: 4px solid red !important;
+} */
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../assets/fonts/Gilroy-Medium.woff2) format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../assets/fonts/Gilroy-Bold.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../assets/fonts/Gilroy-ExtraBold.woff2) format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+body,
+:where(blockquote, figure, fieldset):where([class]) {
+    margin: 0;
+}
+
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(ul[class]) {
+    list-style: none;
+}
+
+:where(address[class]) {
+    font-style: normal;
+}
+
+p {
+    --paragraphMarginBottom: 24px;
+    margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a:where([class]) {
+    display: inline-flex;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root {
+    --color-bg: #FFFFFF;
+    --color-bg-second: #FAFAFF;
+    --color-text: #2B2B2B;
+    --color-text-muted: #363636;
+    --color-accent: #6041D3;
+    --color-stroke: #E4E4FF;
+
+    --color-gradient-start: #492CB1;
+    /* начало градиента */
+    --color-gradient-end: #8E59FF;
+    /* конец градиента */
+
+
+    --font-family: 'Gilroy', sans-serif;
+    --font-size: 1rem;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-bg);
+    line-height: 1;
+}
+
+.nav {
+    box-sizing: border-box;
+    max-width: 1300px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-second);
+    padding:32px 64px;
+    border-radius: 0 0 16px 16px;
+    outline: 1px solid var(--color-stroke);
+      
+
+}
+
+.nav__menu {
+    display: inline-flex;
+    column-gap: 5.5rem;
+    font-weight: 700;
+
+}
+
+.nav__menu-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav__phone {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.16;
+}

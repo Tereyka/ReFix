@@ -2,8 +2,283 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReFix</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFix</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="assets/images/logo.svg" class="logo__img" alt="Логотип ReFix">
+            </a>
+            <ul class="nav__menu">
+                <li class="nav__menu-item">
+                    <a href="#advantages" class="nav__menu-link">Почему мы?</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#services" class="nav__menu-link">Услуги</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#request" class="nav__menu-link">Узнать цену</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="#contacts" class="nav__menu-link">Контакты</a>
+                </li>
+            </ul>
+            <a class="nav__phone" href="tel:+79539559300" aria-label="Позвонить в ReFix">+7 (953) 955-93-00</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="hero__title">Сервис по ремонту <span class="hero__title-accent">мобильной техники</span> в
+                Алексине</h1>
+            <ul class="hero__list">
+                <li class="hero__list-item">Бесплатная диагностика</li>
+                <li class="hero__list-item">Гарантия на ремонт</li>
+                <li class="hero__list-item">Скидки постоянным клиентам</li>
+            </ul>
+            <a href="#request" class="button button--primary">
+                Рассчитать стоимость
+            </a>
+            <img class="hero__img" src="assets/images/macbook.png" alt="Apple MacBook">
+        </section>
+
+        <section class="advantages" id="advantages">
+            <h2 class="title">Почему нам доверяют?</h2>
+            <ul class="advantages__list">
+                <li class="advantages__item">
+                    <span class="advantage__icon advantage__icon--guarantee" aria-hidden="true"></span>
+                    <h3 class="advantage__title">Честная гарантия</h3>
+                    <p class="advantage__text">
+                        Мы предоставляем настоящую документированную
+                        гарантию на все виды ремонта.
+                    </p>
+                </li>
+
+                <li class="advantages__item">
+                    <span class="advantage__icon advantage__icon--price" aria-hidden="true"></span>
+                    <h3 class="advantage__title">Прозрачные цены</h3>
+                    <p class="advantage__text">
+                        Стоимость ремонта озвучиваем заранее
+                        и не меняем её в процессе.
+                    </p>
+                </li>
+
+                <li class="advantages__item">
+                    <span class="advantage__icon advantage__icon--master" aria-hidden="true"></span>
+                    <h3 class="advantage__title">Опытные мастера</h3>
+                    <p class="advantage__text">
+                        Ремонт выполняют квалифицированные специалисты.
+                    </p>
+                </li>
+
+                <li class="advantages__item">
+                    <span class="advantage__icon advantage__icon--speed" aria-hidden="true"></span>
+                    <h3 class="advantage__title">Быстрый ремонт</h3>
+                    <p class="advantage__text">
+                        Большинство неисправностей устраняем
+                        в день обращения благодаря наличию запчастей.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+        <section class="price">
+            <div class="price__content">
+                <h2 class="price__title">Узнайте точную стоимость ремонта до начала работ</h2>
+                <p class="price__text">Опишите поломку вашей техники и получите точный расчет стоимости ремонта. Наш
+                    специалист свяжется с вами, проконсультирует и ответит на все вопросы.</p>
+            </div>
+            <a href="#request" class="button button--secondary">
+                Рассчитать стоимость
+            </a>
+        </section>
+        <section class="services" id="services">
+            <h2 class="services__title">Основные услуги</h2>
+
+            <ul class="services__list">
+                <li class="services__item">
+                    <article class="service-card">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Замена аккумулятора смартфона</h3>
+                            <p class="service-card__text">
+                                Our company is not just a leading supplier of S3 storage. We are a team of highly
+                                qualified specialists who create the most innovative and efficient solutions for storing
+                                and managing data in the cloud. We understand how important data is to your business,
+                                and therefore our main mission is to provide the security and reliability of storing
+                                your data.
+                            </p>
+                            <span class="service-card__price">от 5900 руб.</span>
+                        </div>
+                        <img src="assets\images\service-1.png" class="service-card__media"
+                            alt="Замена аккумулятора смартфона">
+                        <!-- тут будет файл с гифкой вместо .png -->
+                    </article>
+                </li>
+
+                <li class="services__item">
+                    <article class="service-card">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Замена аккумулятора смартфона</h3>
+                            <p class="service-card__text">
+                                Our company is not just a leading supplier of S3 storage. We are a team of highly
+                                qualified specialists who create the most innovative and efficient solutions for storing
+                                and managing data in the cloud. We understand how important data is to your business,
+                                and therefore our main mission is to provide the security and reliability of storing
+                                your data.
+                            </p>
+                            <span class="service-card__price">от 5900 руб.</span>
+                        </div>
+                        <img src="assets\images\service-2.png" class="service-card__media"
+                            alt="Замена аккумулятора смартфона">
+                        <!-- тут будет файл с гифкой вместо .png -->
+                    </article>
+                </li>
+
+                <li class="services__item">
+                    <article class="service-card">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Замена аккумулятора смартфона</h3>
+                            <p class="service-card__text">
+                                Our company is not just a leading supplier of S3 storage. We are a team of highly
+                                qualified specialists who create the most innovative and efficient solutions for storing
+                                and managing data in the cloud. We understand how important data is to your business,
+                                and therefore our main mission is to provide the security and reliability of storing
+                                your data.
+                            </p>
+                            <span class="service-card__price">от 5900 руб.</span>
+                        </div>
+                        <img src="assets\images\service-3.png" class="service-card__media"
+                            alt="Замена аккумулятора смартфона">
+                        <!-- тут будет файл с гифкой вместо .png -->
+                    </article>
+                </li>
+                <li class="services__item">
+                    <article class="service-card">
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Замена аккумулятора смартфона</h3>
+                            <p class="service-card__text">
+                                Our company is not just a leading supplier of S3 storage. We are a team of highly
+                                qualified specialists who create the most innovative and efficient solutions for storing
+                                and managing data in the cloud. We understand how important data is to your business,
+                                and therefore our main mission is to provide the security and reliability of storing
+                                your data.
+                            </p>
+                            <span class="service-card__price">от 5900 руб.</span>
+                        </div>
+                        <img src="assets\images\service-4.png" class="service-card__media"
+                            alt="Замена аккумулятора смартфона">
+                        <!-- тут будет файл с гифкой вместо .png -->
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section class="socials">
+            <h2 class="title">Мы в социальных сетях</h2>
+            <ul class="socials__list">
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="assets/images/telegram.svg" alt="Telegram" class="socials__icon">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="assets/images/vk.svg" alt="VK" class="socials__icon">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#" class="socials__link">
+                        <img src="assets/images/instagram.svg" alt="Instagram" class="socials__icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="socials__media">
+                <video class="socials__video" controls>
+                    <source src="assets/videos/video_placeholder.mp4" type="video/mp4">
+                </video>
+                <video class="socials__video" controls>
+                    <source src="assets/videos/video_placeholder.mp4" type="video/mp4">
+                </video>
+                <video class="socials__video" controls>
+                    <source src="assets/videos/video_placeholder.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section id="request">
+            <h2 class="title">Не определились с ремонтом?</h2>
+            <p class="request__text">Опишите проблему с техникой. Наш специалист свяжется с вами и рассчитает точную
+                стоимость ремонта. Вы будете перенаправлены в наш Telegram</p>
+            <a href="#" class="button button--secondary">
+                Оставить заявку
+            </a>
+        </section>
+        <section id="contacts">
+            <h2 class="title">Где нас найти?</h2>
+            <div class="contacts__map map">
+                <iframe class="map__frame" src="assets\images\service-1.png" width="100%"
+                    height="400" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <h3 сlass="contacts__title">Адрес:</h3>
+                    <address class="contacts__address">Алексин, ул.Ложевая 138</address>
+                </li>
+                <li class="contacts__item">
+                    <h3 сlass="contacts__title">Время работы:</h3>
+                    <time datetime="Mo-Su 08:00-20:00">
+                        Пн–Вс: 08:00–20:00
+                    </time>
+                </li>
+                <li class="contacts__item">
+                    <h3 сlass="contacts__title">Телефон для связи:</h3>
+                    <a href="tel:+79539559300" aria-label="Позвонить в ReFix">+7 (953)
+                        955-93-00</a>
+                </li>
+                <li class="contacts__item">
+                    <h3 сlass="contacts__title">Почта организации:</h3>
+                    <a href="mailto:danila.sharkin@gmail.com">danila.sharkin@gmail.com</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img src="assets/images/logo.svg" class="logo__img" alt="Логотип ReFix">
+            </a>
+            <ul class="nav__menu">
+                <li class="nav__menu-item">
+                    <a href="#advantages" class="nav__menu-link">Почему мы?</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#services" class="nav__menu-link">Услуги</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#request" class="nav__menu-link">Узнать цену</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="#contacts" class="nav__menu-link">Контакты</a>
+                </li>
+            </ul>
+            <a class="nav__phone" href="tel:+79539559300" aria-label="Позвонить в ReFix">+7 (953) 955-93-00</a>
+        </nav>
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                © 2026 ReFix
+            </p>
+
+            <a href="#" class="footer__policy">
+                Политика конфиденциальности
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
