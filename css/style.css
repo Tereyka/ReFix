@@ -1,6 +1,6 @@
 /* * {
     outline: 4px solid red !important;
-} */
+}  */
 
 @font-face {
     font-family: 'Gilroy';
@@ -132,23 +132,21 @@ button {
 
 body {
     font-family: var(--font-family);
-    color: var(--color-bg);
+    color: var(--color-text);
     line-height: 1;
 }
 
 .nav {
-    box-sizing: border-box;
     max-width: 1300px;
-    margin-inline: auto;
     display: flex;
+    margin-inline: auto;
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-bg-second);
-    padding:32px 64px;
+    padding: 2rem 4rem;
     border-radius: 0 0 16px 16px;
     outline: 1px solid var(--color-stroke);
-      
-
+    margin-bottom: 4rem;
 }
 
 .nav__menu {
@@ -169,4 +167,74 @@ body {
     text-decoration: none;
     font-weight: 700;
     line-height: 1.16;
+}
+
+.hero {
+    max-width: 1300px;
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    background-color: var(--color-bg-second);
+    outline: 1px solid var(--color-stroke);
+    border-radius: 30px;
+    padding: 4rem 3.375rem 4.5rem 4rem;
+    margin-bottom: 7.5rem;
+
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.125rem;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+}
+
+.hero__title-accent {
+    color: var(--color-accent);
+}
+
+.hero__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero__list-item {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.hero__list-item::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-accent);
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.btn-price {
+    max-width: 253px;
+    text-decoration: none;
+    background-color: var(--color-accent);
+    padding: 1.3rem 2rem;
+    border-radius: 15px;
+    color: var(--color-bg);
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.465;
+}
+
+.hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
