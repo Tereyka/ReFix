@@ -1,0 +1,6 @@
+<svg viewBox="0 0 20.1045 20.0124" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.104492" height="20.012447" fill="none" customFrame="#000000">
+	<g id="Close">
+		<line id="Line 1" x1="0" x2="24" y1="0" y2="0" stroke="rgb(96,65,211)" stroke-linecap="round" stroke-width="3.000000" transform="matrix(0.707107,-0.707107,0.707107,0.707107,1.50635,18.5063)" />
+		<line id="Line 2" x1="0" x2="24" y1="0" y2="0" stroke="rgb(96,65,211)" stroke-linecap="round" stroke-width="3.000000" transform="matrix(0.707107,0.707107,-0.707107,0.707107,1.62793,1.50614)" />
+	</g>
+</svg>
