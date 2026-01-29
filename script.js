@@ -4,6 +4,8 @@ const navMenu = document.querySelector('.nav__menu');
 const navPhone = document.querySelector('.nav__phone');
 const overlay = document.querySelector('.overlay');
 const menuLinks = document.querySelectorAll('.nav__menu-link');
+const navPhoneMobile = document.querySelector('.nav__phone-mobile');
+
 
 function closeMenu() {
     nav.classList.remove('is-open');
@@ -19,6 +21,8 @@ burgerButton.addEventListener('click', () => {
     navMenu.classList.toggle('is-open');
     burgerButton.classList.toggle('is-open');
     overlay.classList.toggle('is-open');
+    if (navPhoneMobile) navPhoneMobile.classList.toggle('is-open');
+
 });
 
 menuLinks.forEach(link => {

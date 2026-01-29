@@ -162,7 +162,7 @@
 
  .nav__menu {
      display: inline-flex;
-     column-gap: 5.5rem;
+     column-gap: clamp(1.5rem, calc(-3.07rem + 9.52vw), 5.5rem);
      font-weight: 700;
  }
 
@@ -172,7 +172,8 @@
      text-decoration: none;
  }
 
- .nav__phone {
+ .nav__phone,
+ .nav__phone-mobile {
      color: var(--color-accent);
      font-size: 1.5rem;
      text-decoration: none;
@@ -180,23 +181,43 @@
      line-height: 1.16;
  }
 
+ .nav__phone-mobile {
+     font-size: 1.2rem;
+ }
+
+ .nav__phone-mobile {
+     display: none;
+ }
+
  .nav__burger {
      display: none;
  }
 
- @media (max-width:1300px) {
-     .nav__menu {
-         column-gap: 4rem;
-     }
- }
-
-
-
  @media (max-width:1200px) {
      .header {
+         width: 100vw;
          padding: 0;
      }
 
+     .nav {
+         padding: 2rem 1.875rem 2rem 1.875rem;
+     }
+ }
+
+ @media (max-width:992px) {
+     .header {
+         width: 100vw;
+         padding: 0;
+         height: 120px;
+     }
+
+     .nav {
+         padding: 2rem 1.875rem 2rem 1.875rem;
+     }
+
+     main {
+         padding-top: 60px;
+     }
 
      .nav__menu {
          display: none;
@@ -205,7 +226,7 @@
      .nav__burger-container {
          align-items: center;
          display: flex;
-         gap: 6rem;
+         gap: clamp(2.875rem, calc(-1.45rem + 12.02vw), 6rem);
      }
 
      .nav__burger {
@@ -229,16 +250,18 @@
      .nav.is-open {
          position: fixed;
          z-index: 10;
+         top: 0;
+         left: 0;
+         width: 100%;
          background-color: var(--color-bg);
          border-radius: 0 0 16px 16px;
          outline: 1px solid var(--color-stroke);
+         height: 120px;
      }
-
 
      .nav__menu.is-open {
          display: block;
          display: flex;
-         gap: 1.5rem;
      }
 
      .nav__burger.is-open {
@@ -250,6 +273,53 @@
 
      .nav__phone.is-close {
          display: none;
+     }
+
+     .logo__img {
+         width: 112px;
+     }
+
+
+ }
+
+ @media (max-width:675px) {
+
+     .nav__phone {
+         display: none;
+     }
+
+     .logo__img {
+         grid-area: image;
+         width: 112px;
+     }
+
+     .nav__menu.is-open {
+         flex-direction: column;
+     }
+
+
+     .nav__phone-mobile.is-open {
+         display: block;
+     }
+
+     .nav.is-open {
+         height: 300px;
+         display: grid;
+         grid-template-columns: 200px 20px;
+         grid-auto-flow: column;
+         grid-template-areas: "image burger"
+             "nav_menu nav_menu";
+         align-items: start;
+     }
+
+     .nav__burger.is-open {
+         grid-area: burger;
+
+     }
+
+     .nav__menu.is-open {
+         grid-area: nav_menu;
+         gap: 16px;
      }
 
  }
