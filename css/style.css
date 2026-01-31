@@ -193,9 +193,8 @@
      display: none;
  }
 
- @media (max-width:1200px) {
+ @media (max-width:1300px) {
      .header {
-         width: 100vw;
          padding: 0;
      }
 
@@ -206,7 +205,6 @@
 
  @media (max-width:992px) {
      .header {
-         width: 100vw;
          padding: 0;
          height: 120px;
      }
@@ -256,7 +254,6 @@
          background-color: var(--color-bg);
          border-radius: 0 0 16px 16px;
          outline: 1px solid var(--color-stroke);
-         height: 120px;
      }
 
      .nav__menu.is-open {
@@ -303,7 +300,7 @@
      }
 
      .nav.is-open {
-         height: 300px;
+         height: 270px;
          display: grid;
          grid-template-columns: 200px 20px;
          grid-auto-flow: column;
@@ -318,6 +315,7 @@
      }
 
      .nav__menu.is-open {
+         margin-top: 1rem;
          grid-area: nav_menu;
          gap: 16px;
      }
@@ -334,7 +332,7 @@
      background-color: var(--color-bg-second);
      outline: 1px solid var(--color-stroke);
      border-radius: 30px;
-     padding: 4rem 3.375rem 4.5rem 4rem;
+     padding: clamp(3rem, calc(2.65rem + 1.50vw), 3.5rem);
      margin-bottom: 7.5rem;
  }
 
@@ -345,7 +343,7 @@
  }
 
  .hero__title {
-     font-size: clamp(3rem, 4vw, 3.5rem);
+     font-size: clamp(2rem, calc(1.47rem + 2.25vw), 3.5rem);
      margin-bottom: 2rem;
      line-height: 1.16;
      letter-spacing: -0.02em;
@@ -378,8 +376,8 @@
  }
 
  .btn-price {
-     max-width: 100%;
-     width: 253px;
+     width: 100%;
+     max-width: 253px;
      max-height: 65px;
      text-decoration: none;
      background-color: var(--color-accent);
@@ -392,13 +390,15 @@
  }
 
  .hero__img {
-     display: block;
-     width: 100%;
-     max-width: 575px;
+     max-width: clamp(19.6875rem, calc(12.23rem + 31.83vw), 44rem);
      height: auto;
  }
 
  @media (max-width: 1300px) {
+     .main-container-hero {
+         padding: 0;
+     }
+
      .hero {
          flex-direction: column;
      }
@@ -420,6 +420,18 @@
      }
  }
 
+ @media (max-width: 576px) {
+     .hero__title {
+         text-align: start
+     }
+
+     .hero__content,
+     .hero__list {
+         align-items: start;
+     }
+ }
+
+
 
  .advantages {
      max-width: 1171px;
@@ -430,7 +442,7 @@
  .title {
      color: var(--color-text);
      font-weight: 700;
-     font-size: 2.5rem;
+     font-size: clamp(1.5rem, calc(1.15rem + 1.50vw), 2.5rem);
      line-height: 1.16;
      text-align: center;
  }
@@ -438,56 +450,42 @@
  .title::after {
      content: "";
      background: url("../assets/images/waves.svg") no-repeat center;
+     background-size: contain;
      display: block;
      margin-inline: auto;
      margin-top: 1.5rem;
-     margin-bottom: 3.375rem;
-     width: 121px;
+     margin-bottom: clamp(2rem, calc(1.47rem + 2.25vw), 3.5rem);
+     width: 24vw;
      height: 12px;
  }
 
  .advantages__list {
      display: flex;
-     column-gap: 20px;
+     justify-content: center;
+     gap: 1.25rem;
+     flex-wrap: nowrap;
  }
 
  .advantages__item {
+     width: 277px;
      background-color: var(--color-bg-second);
      border: 1px solid var(--color-stroke);
      border-radius: 30px;
-     padding: 2rem;
-     max-width: 278px;
+     padding: clamp(1.5rem, calc(1.32rem + 0.75vw), 2rem);
+
  }
 
  .advantage__icon {
      margin-bottom: 1.5rem;
+     width: clamp(4rem, calc(3.82rem + 0.75vw), 4.5rem);
+     height: clamp(4rem, calc(3.82rem + 0.75vw), 4.5rem);
  }
 
- .advantage__icon-guarantee {
-     width: 72px;
-     height: 72px;
-
- }
-
- .advantage__icon-price {
-     width: 70px;
-     height: 70px;
- }
-
- .advantage__icon-master {
-     width: 62px;
-     height: 62px;
- }
-
- .advantage__icon-speed {
-     width: 72px;
-     height: 72px;
- }
 
  .advantage__title {
      color: var(--color-text);
      font-weight: 700;
-     font-size: 1.25rem;
+     font-size: clamp(1.125rem, calc(1.08rem + 0.19vw), 1.25rem);
      line-height: 1.16;
      margin-bottom: 0.625rem;
  }
@@ -499,60 +497,78 @@
      line-height: 1.4;
  }
 
+ @media (max-width: 1160px) {
+     .main-container-advantages {
+         padding: 0 1.875rem;
+     }
+
+     .advantages {
+         max-width: 708px;
+
+     }
+
+     .advantages__list {
+         flex-wrap: wrap;
+     }
+
+     .advantages__item {
+         width: 344px;
+     }
+ }
+
  .price {
      background: linear-gradient(122.69deg, var(--color-gradient-start), var(--color-gradient-end));
      margin-bottom: 121px;
+     overflow: hidden;
  }
 
  .price__container {
-     max-width: 1167px;
+     max-width: 1199px;
      margin-inline: auto;
      display: flex;
-     padding: 3rem 0 3rem 0;
      justify-content: space-between;
      align-items: center;
+     padding: 2rem;
      position: relative;
-
-
+     z-index: 1;
  }
 
  .price__content {
      color: var(--color-bg);
      max-width: 810px;
-     margin-right: 6.5rem;
+     margin-right: 1.5rem;
  }
 
- /* .price__content::before {
+ .price__content::before,
+ .price__content::after {
      content: "";
-     width: 161px;
-     height: 288px;
-     transform: rotate(15deg);
-     background: url("../assets/images/glow.png");
      position: absolute;
-     bottom: 20px;
-     left: -200px;
+     bottom: 0px;
+     width: 189px;
+     height: 210px;
+     background: url("../assets/images/glow-1.png") no-repeat;
+     background-size: contain;
+     z-index: -1;
+     pointer-events: none;
+ }
+
+ .price__content::before {
+     left: -185px;
  }
 
  .price__content::after {
-     content: "";
-     width: 161px;
-     height: 288px;
-     transform: rotate(15deg);
-     background: url("../assets/images/glow.png");
-     position: absolute;
-     bottom: -20px;
-     right: -15%;
- } */
+     right: -135px;
+ }
 
  .price__title {
-     font-size: 2rem;
+     font-size: clamp(1.5rem, calc(1.32rem + 0.75vw), 2rem);
      line-height: 1.16;
      margin-bottom: 1.25rem;
  }
 
  .price__text {
      max-width: 613px;
-     font-size: 1rem;
+     font-size: clamp(0.875rem, calc(0.83rem + 0.19vw), 1rem);
      line-height: 1.6;
      font-weight: 500;
  }
@@ -560,6 +576,54 @@
  .btn-price-secondary {
      background-color: var(--color-bg);
      color: var(--color-accent);
+ }
+
+ @media(max-width:1200px) {
+
+     .price__content::before,
+     .price__content::after {
+         background: url("../assets/images/glow-1.png") no-repeat;
+         bottom: 50px;
+
+     }
+
+     .price__content::after {
+         top: 30px;
+         transform: rotate(190deg);
+     }
+
+     .price__container {
+         max-width: 708px;
+     }
+
+ }
+
+ @media(max-width:756px) {
+     .price__content::before {
+         top: -95px;
+         left: -95px;
+         transform: rotate(60deg);
+     }
+
+     .price__content::after {
+         top: 140px;
+         right: -40px;
+         transform: rotate(4deg);
+
+     }
+
+     .price__container {
+         flex-direction: column;
+         gap: 1.5rem;
+     }
+
+     .btn-price-secondary {
+         max-width: 315px;
+     }
+
+     .price__title {
+         text-align: center;
+     }
  }
 
  .services__list {
@@ -575,7 +639,7 @@
      background-color: var(--color-bg-second);
      border: 1px solid var(--color-stroke);
      border-radius: 30px;
-     padding: 3.5rem 3.25rem 3.5rem 4rem;
+     padding: 3.5rem 4rem;
  }
 
  .service-card {
@@ -591,27 +655,26 @@
 
 
  .service-card__content {
-     max-width: 516px;
+     width: 516px;
      display: flex;
      flex-direction: column;
-     gap: 2rem;
+     gap: clamp(1rem, calc(0.65rem + 1.50vw), 2rem);
  }
 
  .service-card__title {
-     font-size: 2rem;
+     font-size: clamp(1.125rem, calc(0.82rem + 1.31vw), 2rem);
      line-height: 1.16;
      font-weight: 700;
  }
 
  .service-card__text {
-     max-width: 448px;
-     font-size: 1rem;
+     font-size: clamp(0.875rem, calc(0.83rem + 0.19vw), 1rem);
      line-height: 1.6;
      font-weight: 500;
  }
 
  .service-card__price {
-     font-size: 2rem;
+     font-size: clamp(1.125rem, calc(0.82rem + 1.31vw), 2rem);
      font-weight: 700;
      color: var(--color-accent);
  }
@@ -643,6 +706,35 @@
      pointer-events: none;
      transform: scale(1.05);
  }
+
+ @media (max-width:1200px) {
+     .main-container {
+         padding: 0;
+     }
+.se
+}
+
+@media (max-width:992px) {
+         .service-card__content {
+            width:100%;
+             max-width: 800px;
+         }
+
+         .service-card {
+             flex-direction:column-reverse;
+             align-items: center;
+             justify-content: center;
+         }
+
+         .service-card__content{
+            align-items: start;
+         }
+
+         .services__item{
+            padding: 1.875rem;
+         }
+     }
+ 
 
  .socials {
      max-width: 1170px;
