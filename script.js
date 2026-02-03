@@ -13,6 +13,7 @@ function closeMenu() {
     navMenu.classList.remove('is-open');
     burgerButton.classList.remove('is-open');
     overlay.classList.remove('is-open');
+    navPhoneMobile.classList.remove('is-open');
 }
 
 burgerButton.addEventListener('click', () => {
@@ -21,8 +22,7 @@ burgerButton.addEventListener('click', () => {
     navMenu.classList.toggle('is-open');
     burgerButton.classList.toggle('is-open');
     overlay.classList.toggle('is-open');
-    if (navPhoneMobile) navPhoneMobile.classList.toggle('is-open');
-
+    navPhoneMobile.classList.toggle('is-open');
 });
 
 menuLinks.forEach(link => {
