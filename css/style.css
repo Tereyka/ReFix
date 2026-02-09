@@ -969,7 +969,7 @@
      }
 
      .btn-price-secondary.btn-request {
-         padding: 1.25rem 5.625rem;
+         padding: 1.25rem clamp(40px, calc(-2.65rem + 29.41vw), 90px);
      }
  }
 
@@ -1047,7 +1047,7 @@
  }
 
 
- 
+
  @media(max-width:765px) {
 
      .main-container-mobile {
